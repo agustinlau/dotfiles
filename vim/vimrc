@@ -10,3 +10,43 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 "Ctrl+L to go to split left of current
 nnoremap <C-L> <C-W><C-L>
+syntax enable
+
+" Static line numbering for all files
+set number
+
+
+" Always show the ruler
+set ruler
+
+" Indentation settings
+set tabstop=4             " Tabs stop at multiples of this column number
+set shiftwidth=4          " Number of spaces to use for each step of indentation
+set softtabstop=4         " Number of spaces a tab counts for when editing
+filetype indent plugin on " Attempt to indent by filetype
+set autoindent            " Default to same indent as current line
+
+" Change directories of temporary files
+"" Directory in which to create backups
+set backupdir=~/vimfiles/backup//
+"" Directory in which to create swap files
+set directory=~/vimfiles/swap//
+"" Directory in which to create undo files
+set undodir=~/vimfiles/undo//
+
+" Allow backspacing over autoindent, line breaks, start of insert action
+set backspace=indent,eol,start
+
+" Switch buffers without requiring that buffers be saved
+set hidden
+
+"" Sets the unnamed register to the system clipboard
+set clipboard=unnamed
+
+" Searching
+set nohls      " Disable highlighting
+set ignorecase " No case sensitivity when searching
+set smartcase  " Case sensitive only when there is a captial letter in search
+set incsearch  " Incrementally search while typing
+set wrapscan   " Wrap to beginning of file if end is reached while searching
+>>>>>>> Added some vimrc functionality
